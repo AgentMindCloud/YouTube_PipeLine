@@ -25,18 +25,27 @@ If `ffmpeg` is still missing, install to `C:\ffmpeg` and add `C:\ffmpeg\bin` to 
 cd C:\Users\louis\Desktop\yt-pipeline
 python -m venv .venv
 .\ .venv\Scripts\Activate.ps1
+```
+
+Use this exact activate line (no space after the dot):
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+If execution policy blocks it:
+
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+```
+
+Then:
+
+```powershell
 pip install -r requirements.txt
 copy .env.example .env
 python run.py doctor
 ```
-
-Wait — activation is:
-
-```powershell
-.\ .venv\Scripts\Activate.ps1
-```
-
-If execution policy blocks it: `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`.
 
 `doctor` must show ffmpeg + fonts as OK before you render.
 
