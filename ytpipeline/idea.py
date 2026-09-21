@@ -1,5 +1,6 @@
 """Stage 1 — IDEATION.  OpenAI-generated ideas, or the offline seed bank."""
 import json
+import re
 import time
 
 import requests
@@ -8,6 +9,59 @@ from .config import ROOT
 
 SEEDS = json.loads((ROOT / "ytpipeline" / "fallback" / "seeds.json").read_text(encoding="utf-8"))
 USED_FILE = ROOT / "output" / "used_seeds.json"
+
+_STOP = {
+    "the", "a", "an", "of", "and", "or", "to", "is", "it", "in", "on", "for",
+    "that", "this", "your", "you", "not", "with", "from",
+}
+
+
+def _norm(s):
+    s = (s or "").lower().replace("—", "-").replace("–", "-").replace("'", "")
+    s = re.sub(r"[^a-z0-9]+", " ", s)
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def _tok(s):
+    return {t for t in _norm(s).split() if t and t not in _STOP and len(t) > 1}
+
+
+def match_seed(text, min_score=0.34):
+    """Best seed whose title/topic/hook overlaps `text`. None if weak."""
+    qn = _norm(text)
+    q = _tok(text)
+    if not qn:
+        return None
+    best, best_sc = None, 0.0
+    for s in SEEDS:
+        sc = 0.0
+        if s.get("id") and _norm(s["id"].replace("-", " ")) == qn:
+            sc = 1.0
+        for f in (s.get("id", "").replace("-", " "), s.get("topic", ""),
+                  s.get("title", ""), s.get("hook", "")):
+            fn = _norm(f)
+            if not fn:
+                continue
+            if qn == fn or qn in fn or fn in qn:
+                sc = max(sc, 0.95)
+            ft = _tok(f)
+            if ft and q:
+                sc = max(sc, len(q & ft) / len(q | ft))
+        if sc > best_sc:
+            best, best_sc = s, sc
+    return best if best_sc >= min_score else None
+
+
+def idea_from_seed(seed):
+    return {
+        "topic": seed["topic"],
+        "title": seed["title"],
+        "hook": seed["hook"],
+        "angle": seed.get("angle", ""),
+        "why_it_works": seed.get("angle", "seed bank idea"),
+        "seed_id": seed["id"],
+        "custom": False,
+    }
 
 
 def _used_seeds():
@@ -25,7 +79,6 @@ def _mark_used(seed_id):
 
 
 def openai_ideas(cfg, count=5, avoid=None):
-    """Generate fresh ideas with GPT. Returns list of idea dicts."""
     prompt = (
         f"You are a viral YouTube Shorts strategist.\n"
         f"Channel niche: {cfg('channel.niche')}\n"
@@ -53,25 +106,16 @@ def openai_ideas(cfg, count=5, avoid=None):
 
 
 def seed_ideas(count=5):
-    """Next unused seeds from the offline bank (wraps around when exhausted)."""
     used = _used_seeds()
     fresh = [s for s in SEEDS if s["id"] not in used]
     if len(fresh) < count:
         used.clear()
         USED_FILE.write_text("[]", encoding="utf-8")
         fresh = list(SEEDS)
-    out = []
-    for s in fresh[:count]:
-        out.append({
-            "topic": s["topic"], "title": s["title"], "hook": s["hook"],
-            "angle": s.get("angle", ""), "why_it_works": "seed bank idea",
-            "seed_id": s["id"],
-        })
-    return out
+    return [idea_from_seed(s) for s in fresh[:count]]
 
 
 def generate_ideas(cfg, count=5, log=print):
-    """auto: OpenAI when a key exists, otherwise the seed bank."""
     if cfg.resolve("script") == "openai":
         try:
             avoid = [s["topic"] for s in SEEDS if s["id"] in _used_seeds()]
@@ -85,10 +129,12 @@ def generate_ideas(cfg, count=5, log=print):
 
 
 def next_seed_for(topic=None):
-    """Pick the seed matching an idea (used by the fallback script writer)."""
     if topic:
+        hit = match_seed(topic)
+        if hit:
+            return hit
         for s in SEEDS:
-            if s["id"] == topic or s["topic"].lower() == topic.lower():
+            if s["id"] == topic or s["topic"].lower() == str(topic).lower():
                 return s
     for s in SEEDS:
         if s["id"] not in _used_seeds():
