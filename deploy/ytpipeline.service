@@ -1,0 +1,13 @@
+[Unit]
+Description=yt-pipeline: render + upload one YouTube Short
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/user/yt-pipeline
+ExecStart=/usr/bin/python3 run.py run --auto
+# auth via env credentials (headless): YT_CLIENT_ID / YT_CLIENT_SECRET / YT_REFRESH_TOKEN
+EnvironmentFile=-/home/user/yt-pipeline/.env
+StandardOutput=append:/home/user/yt-pipeline/output/pipeline.log
+StandardError=append:/home/user/yt-pipeline/output/pipeline.log

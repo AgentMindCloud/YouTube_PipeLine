@@ -1,0 +1,10 @@
+[Unit]
+Description=Run yt-pipeline daily (time set in config.yaml → schedule.time_utc)
+
+[Timer]
+OnCalendar=*-*-* 15:00:00
+RandomizedDelaySec=600
+Persistent=true
+
+[Install]
+WantedBy=timers.target

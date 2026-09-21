@@ -1,0 +1,8 @@
+# ── yt-pipeline cron example ────────────────────────────────────────────────
+# Edit paths, then:  crontab -e  (or drop into /etc/cron.d/)
+#
+# Daily at 15:00 UTC — fully unattended (render + upload, approval gate skipped):
+0 15 * * *  cd /home/user/yt-pipeline && /usr/bin/python3 run.py run --auto >> output/cron.log 2>&1
+#
+# Twice daily, only render (review manually with `python run.py list` + `approve`):
+# 0 9,21 * * *  cd /home/user/yt-pipeline && /usr/bin/python3 run.py run --no-upload >> output/cron.log 2>&1

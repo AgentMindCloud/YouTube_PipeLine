@@ -1,0 +1,44 @@
+# Fully unattended daily Short from GitHub Actions.
+#
+# Repo secrets needed:
+#   OPENAI_API_KEY     (optional: falls back to seed scripts + free edge-tts + local visuals)
+#   YT_CLIENT_ID       from your OAuth desktop client
+#   YT_CLIENT_SECRET   from your OAuth desktop client
+#   YT_REFRESH_TOKEN   run `python run.py auth login` once on your laptop,
+#                      then copy refresh_token out of output/token.json
+#
+# Note: GHA runners have ffmpeg preinstalled and enough disk for one Short.
+name: daily-short
+
+on:
+  schedule:
+    - cron: "0 15 * * *"        # 15:00 UTC daily
+  workflow_dispatch: {}
+
+jobs:
+  short:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: deps
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q -r requirements.txt
+      - name: render + upload
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python run.py run --auto
+      - name: keep artifacts on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: run-debug
+          path: output/
