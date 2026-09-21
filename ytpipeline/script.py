@@ -7,6 +7,25 @@ import requests
 from . import idea as idea_mod
 
 BEAT_FIELDS = ("text", "on_screen", "visual_prompt", "broll_query")
+_BAD_TAGS = {
+    "shorts", "short", "youtube", "yt", "video", "videos", "youre", "you're",
+    "your", "you", "the", "and", "for",
+}
+
+
+def clean_tags(tags, topic="", extra=None):
+    out = []
+    for t in list(tags or []) + list(extra or []):
+        t = re.sub(r"[#]", "", str(t)).strip().lower()
+        t = re.sub(r"\s+", " ", t)
+        if len(t) < 3 or t in _BAD_TAGS:
+            continue
+        if t not in out:
+            out.append(t[:30])
+    for w in idea_mod._tok(topic):
+        if w not in _BAD_TAGS and len(w) > 3 and w not in out:
+            out.append(w)
+    return out[:8] or ["psychology", "brain hacks", "facts"]
 
 
 def openai_script(cfg, idea_dict):
@@ -54,43 +73,53 @@ def openai_script(cfg, idea_dict):
 
 def fallback_script(cfg, idea_dict):
     """Offline: use a full seed script, or template-compose around a custom idea."""
-    seed = idea_mod.next_seed_for(idea_dict.get("seed_id") or idea_dict.get("topic"))
-    if seed and (idea_dict.get("seed_id") == seed["id"]
-                 or idea_dict.get("topic", "").lower() == seed["topic"].lower()
-                 or not idea_dict.get("custom")):
+    blob = " ".join(str(idea_dict.get(k) or "") for k in ("seed_id", "topic", "title", "hook"))
+    seed = idea_mod.match_seed(blob) or idea_mod.next_seed_for(
+        idea_dict.get("seed_id") or idea_dict.get("topic"))
+    use_seed = bool(seed) and (
+        idea_dict.get("seed_id") == seed["id"]
+        or idea_mod.match_seed(blob) is not None and idea_mod.match_seed(blob)["id"] == seed["id"]
+        or not idea_dict.get("custom")
+    )
+    if use_seed and seed:
+        tags = clean_tags(seed.get("tags"), seed["topic"])
+        hashes = " ".join(f"#{t.replace(' ', '')}" for t in tags[:4])
         script = {
             "title": seed["title"],
-            "description": f"{seed['hook']} " + " ".join(
-                f"#{t.replace(' ', '')}" for t in seed["tags"][:4]),
-            "tags": seed["tags"],
+            "description": f"{seed['hook']}\n\n{hashes}",
+            "tags": tags,
             "beats": [dict(b) for b in seed["beats"]],
             "source_seed": seed["id"],
         }
         idea_dict.setdefault("seed_id", seed["id"])
         return script
 
-    # custom idea without OpenAI: honest template around the user's hook
     hook = idea_dict.get("hook") or idea_dict.get("topic")
+    topic = idea_dict.get("topic") or hook
+    tags = clean_tags([], topic=topic, extra=["psychology", "brain hacks", "mindset"])
+    hashes = " ".join(f"#{t.replace(' ', '')}" for t in tags[:4])
+    cta = cfg("channel.cta_line", "Follow for more.")
     script = {
-        "title": (idea_dict.get("title") or idea_dict["topic"])[:70],
-        "description": f"{hook} " + " ".join(cfg("upload.hashtags", ["#Shorts"])[:4]),
-        "tags": ["shorts", idea_dict["topic"].split()[0].lower()],
+        "title": (idea_dict.get("title") or topic)[:70],
+        "description": f"{hook}\n\n{hashes}",
+        "tags": tags,
         "beats": [
-            {"text": hook + " And the reason will surprise you.", "on_screen": hook.split()[0].upper(),
-             "visual_prompt": f"cinematic dark illustration about: {idea_dict['topic']}, dramatic lighting, no text",
-             "broll_query": idea_dict["topic"][:30]},
-            {"text": "Most people get this completely wrong. Here's what's actually happening.",
-             "on_screen": "MOST PEOPLE MISS THIS",
+            {"text": hook.rstrip(".") + ".",
+             "on_screen": "WAIT FOR THIS",
+             "visual_prompt": f"cinematic dark illustration about: {topic}, dramatic lighting, no text",
+             "broll_query": topic[:30]},
+            {"text": "Most people treat this like a personality trait. It isn't. It's a fear loop.",
+             "on_screen": "IT'S A FEAR LOOP",
              "visual_prompt": "a crowd of grey silhouettes with one glowing figure seeing hidden connections, dark cinematic, no text",
-             "broll_query": "crowd silhouette"},
-            {"text": "Once you see it, you can't unsee it. It changes how you act every single day.",
-             "on_screen": "CAN'T UNSEE IT",
-             "visual_prompt": "an eye opening with glowing insight rays over a dark city skyline, surreal cinematic, no text",
-             "broll_query": "eye insight"},
-            {"text": f"So next time it comes up, you'll know exactly what to do. {cfg('channel.cta_line', 'Follow for more.')}",
-             "on_screen": "FOLLOW FOR MORE", "type": "cta",
-             "visual_prompt": "a glowing subscribe button floating in dark space with particles, cinematic, no text",
-             "broll_query": "subscribe button"},
+             "broll_query": "fear loop brain"},
+            {"text": "Name the real job in one sentence. Shrink it until it takes two minutes. Start there.",
+             "on_screen": "SHRINK THE TASK",
+             "visual_prompt": "a giant glowing task list being sliced down to one tiny card, dark background, cyan accent light, no text",
+             "broll_query": "tiny checklist"},
+            {"text": f"Do the two-minute version now. {cta}",
+             "on_screen": "DO IT NOW", "type": "cta",
+             "visual_prompt": "a glowing countdown timer hitting zero with golden light, dark background, no text",
+             "broll_query": "timer countdown"},
         ],
         "source_seed": None,
     }
@@ -98,7 +127,6 @@ def fallback_script(cfg, idea_dict):
 
 
 def normalize(cfg, script):
-    """Guarantee a safe, renderable script structure."""
     beats = []
     for b in script.get("beats", []):
         if isinstance(b, str):
@@ -117,8 +145,8 @@ def normalize(cfg, script):
     if not any(b["type"] == "cta" for b in beats):
         beats[-1]["type"] = "cta"
     title = re.sub(r"\s+", " ", str(script.get("title", "Untitled Short"))).strip()[:95]
-    tags = [str(t).strip()[:30] for t in script.get("tags", []) if str(t).strip()][:8] or ["shorts"]
-    desc = re.sub(r"\s+", " ", str(script.get("description", ""))).strip() or title
+    tags = clean_tags(script.get("tags"), title)
+    desc = str(script.get("description", "") or title).strip()
     return {"title": title, "description": desc, "tags": tags, "beats": beats,
             "source_seed": script.get("source_seed")}
 
@@ -128,10 +156,10 @@ def write_script(cfg, idea_dict, log=print):
     if provider == "openai":
         try:
             raw = openai_script(cfg, idea_dict)
-            log(f"  ✦ script by {cfg('script.model')}")
+            log(f"  script by {cfg('script.model')}")
             return normalize(cfg, raw)
         except Exception as e:
             log(f"  ! OpenAI script failed ({e}) — falling back to seed bank")
     raw = fallback_script(cfg, idea_dict)
-    log(f"  ✦ script from offline seed bank ({raw.get('source_seed') or 'template'})")
+    log(f"  script from offline seed bank ({raw.get('source_seed') or 'template'})")
     return normalize(cfg, raw)
