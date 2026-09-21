@@ -1,0 +1,98 @@
+[
+  {
+    "id": "two-minute-rule",
+    "topic": "The 2-Minute Rule that kills procrastination",
+    "title": "You're Not Lazy — Your Brain Is Scared 🧠",
+    "hook": "You're not lazy. Your brain is terrified of big tasks — and there's a two-minute fix.",
+    "angle": "reframe laziness as fear, give an instantly usable tactic",
+    "tags": ["procrastination", "productivity", "psychology", "2 minute rule", "brain hacks", "motivation"],
+    "beats": [
+      {"text": "You're not lazy. Your brain is genuinely terrified of big tasks — and there's a two-minute fix.", "on_screen": "YOU'RE NOT LAZY", "visual_prompt": "a tiny human figure staring up at an enormous looming mountain made of clocks, paperwork and glowing screens, dark cinematic atmosphere, purple rim light", "broll_query": "overwhelmed person desk"},
+      {"text": "It's called the two-minute rule. Shrink any task until it takes two minutes or less. That's it.", "on_screen": "THE 2-MINUTE RULE", "visual_prompt": "a giant glowing task list being sliced by a beam of light down to one tiny card, dark background, cyan accent light", "broll_query": "writing checklist"},
+      {"text": "'Write the essay' becomes 'open the document.' 'Get fit' becomes 'put on your shoes.'", "on_screen": "START ABSURDLY SMALL", "visual_prompt": "a pair of running shoes glowing on a dark floor with a single spotlight, minimalist cinematic", "broll_query": "running shoes"},
+      {"text": "Here's why it works: your brain resists starting, not doing. Two minutes sneaks straight past the fear response.", "on_screen": "TRICK YOUR BRAIN", "visual_prompt": "a stylized translucent human brain with a glowing golden key sliding into it, dark navy background, dramatic lighting", "broll_query": "brain neuroscience"},
+      {"text": "And motivation doesn't create action — action creates motivation. Once you start, momentum does the rest.", "on_screen": "MOMENTUM DOES THE REST", "visual_prompt": "a small snowball rolling downhill becoming a massive avalanche, motion blur, dark blue winter twilight", "broll_query": "snowball rolling"},
+      {"text": "So pick one task you've been avoiding. Shrink it to two minutes. Do it now. Follow for a new brain hack every day.", "on_screen": "TRY IT TODAY", "type": "cta", "visual_prompt": "a glowing countdown timer hitting zero with rays of golden light bursting outward, dark background", "broll_query": "timer countdown"}
+    ]
+  },
+  {
+    "id": "black-hole-fall",
+    "topic": "What actually happens if you fall into a black hole",
+    "title": "Falling Into a Black Hole, Second by Second 🕳️",
+    "hook": "If you fell into a black hole, you wouldn't just die — you'd become spaghetti.",
+    "angle": "second-by-second countdown, visceral physical consequences",
+    "tags": ["black hole", "space", "physics", "astrophysics", "science facts", "universe"],
+    "beats": [
+      {"text": "If you fell into a black hole, you wouldn't just die — you'd become spaghetti. Here's the timeline.", "on_screen": "YOU'D BECOME SPAGHETTI", "visual_prompt": "a lone astronaut in a spacesuit falling feet-first toward a colossal black hole with a blazing orange accretion disk, cinematic space scene", "broll_query": "black hole space"},
+      {"text": "At one million kilometers out, nothing feels wrong. Gravity is gravity. You're still fine.", "on_screen": "STILL FINE", "visual_prompt": "an astronaut floating calmly in deep space with distant stars, a faint dark sphere far below, serene cinematic", "broll_query": "astronaut floating space"},
+      {"text": "Cross the event horizon and there's no alarm, no wall — but every path now leads deeper. Not even light escapes.", "on_screen": "POINT OF NO RETURN", "visual_prompt": "view from inside a dark sphere looking up at a shrinking circle of starlight far above, eerie blue-black cinematic", "broll_query": "event horizon"},
+      {"text": "Now your feet feel far more gravity than your head. The stretch begins. Scientists literally call it spaghettification.", "on_screen": "SPAGHETTIFICATION", "visual_prompt": "an astronaut's silhouette being stretched into a long glowing thread of light toward a singularity, surreal dramatic space art", "broll_query": "gravity stretch"},
+      {"text": "And here's the strange part: to a friend watching from afar, you never fall in at all. Your image freezes at the edge, fading to red… forever.", "on_screen": "YOU FREEZE FOREVER", "visual_prompt": "a frozen reddish afterimage of an astronaut suspended at the rim of a black hole, time dilation concept, dark cinematic space", "broll_query": "time dilation"},
+      {"text": "The universe is stranger than fiction. Follow for more space every week.", "on_screen": "SPACE IS STRANGER", "type": "cta", "visual_prompt": "a breathtaking swirl of galaxies and nebulae in deep space, purple and cyan tones, ultra detailed", "broll_query": "galaxy nebula"}
+    ]
+  },
+  {
+    "id": "shortest-war",
+    "topic": "The shortest war in history lasted 38 minutes",
+    "title": "The War That Ended Before Lunch 🇬🇧",
+    "hook": "The shortest war in history lasted 38 minutes. One side didn't even get breakfast.",
+    "angle": "absurd true history with a punchy timeline",
+    "tags": ["history", "shortest war", "zanzibar", "british empire", "history facts", "war facts"],
+    "beats": [
+      {"text": "The shortest war in history lasted thirty-eight minutes. One side didn't even get breakfast.", "on_screen": "A 38-MINUTE WAR", "visual_prompt": "an ornate antique brass stopwatch frozen at 38 minutes on a dark wooden admiral's desk with old naval maps, moody candlelight", "broll_query": "antique stopwatch"},
+      {"text": "The year is 1896. The place: Zanzibar, a small island sultanate off East Africa.", "on_screen": "ZANZIBAR, 1896", "visual_prompt": "a vintage 1890s sailing harbor at dawn with dhows and a distant sultan's palace, sepia cinematic illustration", "broll_query": "old sailing ships"},
+      {"text": "The sultan dies. His cousin seizes the palace — without asking the British Empire first. Big mistake.", "on_screen": "HE SEIZED THE PALACE", "visual_prompt": "a dramatic silhouette of a man standing defiantly before an ornate palace gate at dusk, torches glowing, dark cinematic", "broll_query": "palace gate night"},
+      {"text": "Britain issues an ultimatum: step down by 9 AM. Five Royal Navy warships aim their guns at the palace.", "on_screen": "9 AM DEADLINE", "visual_prompt": "a line of 1890s British warships in dark harbor water at dawn, cannons pointed at the viewer, smoke and gold morning light", "broll_query": "warships navy"},
+      {"text": "At 9:02, they open fire. By 9:40, the palace is rubble, the flag is down, and the war is over.", "on_screen": "OVER BY 9:40", "visual_prompt": "an ornate seaside palace collapsing in explosions and smoke seen from warships, dramatic orange fire against dawn sky", "broll_query": "explosion historic"},
+      {"text": "Thirty-eight minutes. History's fastest war. Follow — real history is wilder than you think.", "on_screen": "38 MINUTES", "type": "cta", "visual_prompt": "a tattered old naval flag drifting down over a smoking historic harbor at sunrise, melancholic cinematic", "broll_query": "old flag"}
+    ]
+  },
+  {
+    "id": "supermarket-tricks",
+    "topic": "How supermarkets are engineered to make you spend more",
+    "title": "Supermarkets Are Rigged. Here's Proof 🛒",
+    "hook": "Every supermarket you've ever entered was designed to empty your wallet.",
+    "angle": "reveal hidden design tricks people experience daily",
+    "tags": ["supermarket", "psychology", "marketing tricks", "shopping", "consumer psychology", "money"],
+    "beats": [
+      {"text": "Every supermarket you've ever walked into was designed for one purpose: to empty your wallet.", "on_screen": "IT'S ALL ENGINEERED", "visual_prompt": "a top-down view of an endless glowing supermarket maze at night, one small shopper with a cart, dark cinematic neon", "broll_query": "supermarket aisle"},
+      {"text": "Trick one: essentials live at the back. Milk, eggs, bread — you must cross the entire store to reach them.", "on_screen": "MILK IS IN THE BACK", "visual_prompt": "a single glowing refrigerator case at the far end of a long dark supermarket aisle, dramatic perspective", "broll_query": "milk grocery"},
+      {"text": "Trick two: eye level is buy level. The most profitable brands sit exactly where your eyes land. Kids' cereals sit lower — at kid height.", "on_screen": "EYE LEVEL = BUY LEVEL", "visual_prompt": "close-up of supermarket shelves with one golden glowing shelf at eye level, dark surroundings, cinematic product lighting", "broll_query": "store shelves"},
+      {"text": "Trick three: the store breathes. Slow music and wide loops slow your walking speed — and slow shoppers spend more.", "on_screen": "SLOW MUSIC, MORE SPENDING", "visual_prompt": "a shopper in soft golden spotlight walking slowly down a dark aisle while sound waves ripple through the air, surreal cinematic", "broll_query": "slow walking"},
+      {"text": "And the checkout? Candy, gum, magazines — impulse traps for your tired, decision-exhausted brain.", "on_screen": "THE FINAL TRAP", "visual_prompt": "a checkout counter cluttered with glowing candy bars and gum under harsh light, dark background, cinematic close-up", "broll_query": "checkout candy"},
+      {"text": "Now you see the matrix. Shop with a list. Follow for more ways the world quietly manipulates you.", "on_screen": "SEE THE MATRIX", "type": "cta", "visual_prompt": "a person wearing sunglasses seeing glowing wireframe overlays of a supermarket, matrix concept, green and dark cinematic", "broll_query": "matrix vision"}
+    ]
+  },
+  {
+    "id": "baby-amnesia",
+    "topic": "Why you can't remember being a baby",
+    "title": "Your Brain Deleted Your First 3 Years 🍼",
+    "hook": "You have zero memories from before age three. Your brain deleted them on purpose.",
+    "angle": "mystery of the self, surprising neuroscience",
+    "tags": ["memory", "neuroscience", "brain facts", "psychology", "science", "baby brain"],
+    "beats": [
+      {"text": "You have zero memories from before age three. Your brain deleted them — on purpose.", "on_screen": "YOUR BRAIN HIT DELETE", "visual_prompt": "a glowing translucent baby brain with memories as light particles dissolving away into darkness, cinematic science illustration", "broll_query": "brain memory"},
+      {"text": "It's called infantile amnesia, and for a century nobody could explain it.", "on_screen": "INFANTILE AMNESIA", "visual_prompt": "an old dark library of floating photo frames, the earliest frames completely blank and fading to white mist, moody cinematic", "broll_query": "old photographs"},
+      {"text": "Here's the twist: babies DO form memories. In labs, infants recall faces and routines for weeks. The memories exist.", "on_screen": "BABIES DO REMEMBER", "visual_prompt": "a stylized infant reaching toward glowing floating orbs of soft light in a dark nursery, warm cinematic glow", "broll_query": "baby learning"},
+      {"text": "The problem is the hippocampus — your memory indexer — is still under construction, and new neurons keep overwriting the old wiring.", "on_screen": "UNDER CONSTRUCTION", "visual_prompt": "a cross-section of a glowing brain region under construction with tiny cranes and scaffolding made of neurons, surreal dark science art", "broll_query": "hippocampus"},
+      {"text": "Plus, you had no language yet. Memories are stored as stories — and with no words, those stories had nothing to stick to.", "on_screen": "NO WORDS, NO STORIES", "visual_prompt": "glowing letters and words dissolving into mist before they can land on a memory card floating in darkness, cinematic", "broll_query": "letters dissolving"},
+      {"text": "Your first years weren't lost — they were the price of building the brain that remembers this video. Follow for more mind-bending science.", "on_screen": "WORTH THE PRICE", "type": "cta", "visual_prompt": "a magnificent glowing neural network forming the shape of a human head against deep space darkness, purple and gold, ultra detailed", "broll_query": "neural network"}
+    ]
+  },
+  {
+    "id": "first-bug",
+    "topic": "The first computer bug was an actual moth",
+    "title": "The First 'Computer Bug' Was Real 🦋",
+    "hook": "In 1947, a computer broke. Engineers found the bug — a real, dead moth.",
+    "angle": "charming true tech-history story with a visual artifact",
+    "tags": ["tech history", "computer bug", "harvard mark ii", "engineering", "computing facts", "history of computers"],
+    "beats": [
+      {"text": "In 1947, a two-story computer at Harvard started failing. The engineers found the bug. It was real. It had wings.", "on_screen": "A REAL BUG", "visual_prompt": "a giant vintage 1940s room-sized computer with spinning reels and blinking lights in a dark lab, dramatic warm lamps, cinematic", "broll_query": "vintage computer"},
+      {"text": "The machine was the Harvard Mark Two — five tons of relays, switches and spinning shafts.", "on_screen": "HARVARD MARK II", "visual_prompt": "close-up of rows of mechanical relays and switches inside an antique computer cabinet, brass and bakelite, moody lighting", "broll_query": "mechanical relays"},
+      {"text": "On September 9th, operators traced a fault to Relay seventy. Jammed inside it: a dead moth, wings spread.", "on_screen": "RELAY 70", "visual_prompt": "a dramatic macro shot of a moth trapped between brass mechanical contacts, tiny sparks glowing around it, dark cinematic", "broll_query": "moth macro"},
+      {"text": "They taped it into the logbook and wrote: 'First actual case of bug being found.' That logbook is in a museum today.", "on_screen": "'BUG BEING FOUND'", "visual_prompt": "an aged engineer's logbook under a desk lamp with a pressed moth taped to the page and handwritten notes, warm cinematic close-up", "broll_query": "old logbook"},
+      {"text": "Engineers already called faults 'bugs' — Edison used the word decades earlier. But one moth made it immortal.", "on_screen": "MADE IT IMMORTAL", "visual_prompt": "a glowing holographic moth transforming into streams of green binary code flying across a dark server room, cinematic", "broll_query": "binary code"},
+      {"text": "Every time your app crashes, remember: it started with a moth. Follow for more hidden tech history.", "on_screen": "IT STARTED WITH A MOTH", "type": "cta", "visual_prompt": "a silhouette of a moth on a glowing computer screen in a dark room, cyan screen light, minimalist cinematic", "broll_query": "computer screen dark"}
+    ]
+  }
+]
