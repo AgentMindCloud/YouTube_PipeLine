@@ -1,0 +1,73 @@
+# ──────────────────────────────────────────────────────────────
+# yt-pipeline configuration
+# Every "provider" field accepts: auto | <specific> 
+#   auto = use the best available (OpenAI if key set, else free fallback)
+# ──────────────────────────────────────────────────────────────
+
+channel:
+  name: "MindSnacks"                # your channel name
+  handle: "@mindsnacks"             # shown as watermark on videos
+  niche: "psychology, human behavior and everyday brain hacks"
+  audience: "curious 18-34 year olds scrolling YouTube Shorts"
+  tone: "punchy, confident, conversational. Short sentences. No fluff."
+  language: "en-US"
+  cta_line: "Follow for a new brain hack every day."
+
+video:
+  fps: 30
+  max_duration: 58          # seconds. Shorts hard cap was 60s (now 180s); 58 keeps margin
+  tail_padding: 0.8         # seconds of held last frame after narration ends
+  brand_colors: ["#7C3AED", "#06B6D4", "#F59E0B"]   # accents for visuals/captions
+  caption:
+    font: "Archivo Black"
+    size: 88
+    highlight: "#FFD400"    # active-word color
+    y: 1300                 # vertical position (of 1920)
+    max_words_per_line: 3
+    max_chars_per_line: 24
+  ken_burns_zoom: 0.10      # zoom amount per beat (0.06 subtle … 0.16 aggressive)
+
+script:
+  provider: auto            # auto | openai | fallback
+  model: "gpt-4o-mini"
+  temperature: 0.9
+  beats: [5, 7]             # min/max narration beats (hook + points + CTA)
+  words: [95, 125]          # total narration word budget
+
+voice:
+  provider: auto            # auto | openai | edge
+  openai_model: "gpt-4o-mini-tts"
+  openai_voice: "onyx"      # alloy | echo | fable | onyx | nova | shimmer
+  openai_speed: 1.05
+  edge_voice: "en-US-ChristopherNeural"
+  edge_rate: "+6%"
+
+visuals:
+  provider: auto            # auto | openai | pexels | local
+  openai_model: "gpt-image-1"
+  openai_quality: "medium"
+  style_prefix: >-
+    vertical 9:16 cinematic digital illustration, dark moody background,
+    dramatic rim lighting, vivid accent colors, high detail,
+    absolutely no text, no words, no letters, no watermark
+  grain: 0.035              # film grain amount for local renderer (lower = smaller files)
+
+music:
+  enabled: true
+  style: "lofi"             # lofi | ambient | none
+  volume: 0.30              # bgm level relative to voice (ducked further under speech)
+  bpm: 88
+
+upload:
+  client_secrets: "client_secrets.json"   # from Google Cloud Console
+  token_file: "output/token.json"
+  category_id: 22           # 22 People&Blogs · 27 Education · 24 Entertainment · 28 Sci&Tech
+  privacy_auto: "unlisted"  # privacy used by `run --auto`
+  made_for_kids: false
+  playlist_id: ""           # optional: auto-add every Short to this playlist
+  hashtags: ["#Shorts"]     # appended to every description
+  thumbnail: true           # generate + upload a custom thumbnail (needs verified project)
+  daily_upload_limit: 3     # safety valve for unattended runs
+
+schedule:
+  time_utc: "15:00"         # used by the generated cron / systemd / GitHub Action units
