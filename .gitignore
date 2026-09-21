@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+client_secrets.json
+output/*
+!output/README.md
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+token.json
+*.mp4
+*.wav
+*.mp3
+.DS_Store
+Thumbs.db
