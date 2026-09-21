@@ -1,9 +1,0 @@
-{
-  "run_id": "20260919-104356-you-re-not-lazy-your-brain-is-scared",
-  "stage": "render",
-  "state": "awaiting_approval",
-  "title": "You're Not Lazy — Your Brain Is Scared 🧠",
-  "updated": "2026-09-19 10:49:56",
-  "duration": 46.4,
-  "upload_error": "No YouTube credentials found.\n  Option A: put OAuth client JSON at /tmp/arena/tenants/2e89da92-f22c-4ae1-b12b-63a3bb92b412/sessions/f95d9e7c-d8eb-4cce-9074-f1d632b81a16/workspace/yt-pipeline/client_secrets.json then run: python run.py auth login\n  Option B: set YT_CLIENT_ID / YT_CLIENT_SECRET / YT_REFRESH_TOKEN in .env\n  (Google Cloud Console → enable 'YouTube Data API v3' → OAuth client ID 'Desktop app')"
-}
