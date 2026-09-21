@@ -6,13 +6,13 @@ import requests
 
 from .config import ROOT
 
-SEEDS = json.loads((ROOT / "ytpipeline" / "fallback" / "seeds.json").read_text())
+SEEDS = json.loads((ROOT / "ytpipeline" / "fallback" / "seeds.json").read_text(encoding="utf-8"))
 USED_FILE = ROOT / "output" / "used_seeds.json"
 
 
 def _used_seeds():
     if USED_FILE.exists():
-        return json.loads(USED_FILE.read_text())
+        return json.loads(USED_FILE.read_text(encoding="utf-8"))
     return []
 
 
@@ -21,7 +21,7 @@ def _mark_used(seed_id):
     if seed_id not in used:
         used.append(seed_id)
     USED_FILE.parent.mkdir(parents=True, exist_ok=True)
-    USED_FILE.write_text(json.dumps(used))
+    USED_FILE.write_text(json.dumps(used), encoding="utf-8")
 
 
 def openai_ideas(cfg, count=5, avoid=None):
@@ -58,7 +58,7 @@ def seed_ideas(count=5):
     fresh = [s for s in SEEDS if s["id"] not in used]
     if len(fresh) < count:
         used.clear()
-        USED_FILE.write_text("[]")
+        USED_FILE.write_text("[]", encoding="utf-8")
         fresh = list(SEEDS)
     out = []
     for s in fresh[:count]:
@@ -77,7 +77,7 @@ def generate_ideas(cfg, count=5, log=print):
             avoid = [s["topic"] for s in SEEDS if s["id"] in _used_seeds()]
             ideas = openai_ideas(cfg, count=count, avoid=avoid or None)
             if ideas:
-                log(f"  ✦ {len(ideas)} fresh ideas from {cfg('script.model')}")
+                log(f"  {len(ideas)} fresh ideas from {cfg('script.model')}")
                 return ideas
         except Exception as e:
             log(f"  ! OpenAI ideation failed ({e}) — using seed bank")
