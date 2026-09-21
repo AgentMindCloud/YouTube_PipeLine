@@ -11,14 +11,18 @@ from pathlib import Path
 
 from .state import upload_counter
 
-SCOPES = ["https://www.googleapis.com/auth/youtube.upload"]
+# youtube includes upload + playlists + thumbnails + channel read.
+# Existing tokens minted with only youtube.upload must re-run `auth login`.
+SCOPES = [
+    "https://www.googleapis.com/auth/youtube",
+    "https://www.googleapis.com/auth/youtube.upload",
+]
 
 
 class UploadError(RuntimeError):
     pass
 
 
-# ── credentials ──────────────────────────────────────────────────────────────
 def _creds_from_env():
     import os
     cid, sec, tok = os.getenv("YT_CLIENT_ID"), os.getenv("YT_CLIENT_SECRET"), os.getenv("YT_REFRESH_TOKEN")
@@ -40,6 +44,9 @@ def _creds_from_file(cfg):
     creds = None
     if token_file.exists():
         creds = Credentials.from_authorized_user_file(str(token_file), SCOPES)
+        granted = set(creds.scopes or [])
+        if granted and "https://www.googleapis.com/auth/youtube" not in granted:
+            creds = None
     if creds and creds.expired and creds.refresh_token:
         creds.refresh(Request())
         token_file.write_text(creds.to_json())
@@ -74,7 +81,6 @@ def channel_name(cfg):
         return f"(auth check failed: {str(e)[:120]})"
 
 
-# ── upload ───────────────────────────────────────────────────────────────────
 def upload_video(cfg, video_path, metadata, privacy=None, thumb=None, log=print):
     from googleapiclient.errors import HttpError
     from googleapiclient.http import MediaFileUpload
