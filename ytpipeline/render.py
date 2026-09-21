@@ -1,26 +1,11 @@
 """Stage 7 — RENDER.  ffmpeg assembly: Ken Burns segments → concat → captions,
-music ducking, progress bar, fades → final 1080×1920 mp4."""
-import json
-import subprocess
+music ducking, progress bar (drawn in captions.ass), fades → final 1080×1920 mp4.
+"""
 from pathlib import Path
 
+from .media import filter_path, probe_duration, run_ffmpeg, write_concat_list
+
 W, H = 1080, 1920
-
-
-def _ff(args, log=None):
-    p = subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y"] + args,
-                       capture_output=True, text=True)
-    if p.returncode != 0:
-        if log:
-            log(f"  ! ffmpeg error: {p.stderr.strip()[:600]}")
-        raise RuntimeError("ffmpeg failed: " + " ".join(str(a) for a in args[:6]))
-    return p
-
-
-def probe_duration(path):
-    out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
-                          "-of", "json", str(path)], capture_output=True, text=True).stdout
-    return float(json.loads(out)["format"]["duration"])
 
 
 def build_segments(cfg, run, beat_images, durations, log=print):
@@ -34,37 +19,38 @@ def build_segments(cfg, run, beat_images, durations, log=print):
         frames = max(8, round(dur * fps))
         out = seg_dir / f"seg_{i:02d}.mp4"
         zmax = 1.0 + zoom
-        if i % 2 == 0:  # zoom in
+        if i % 2 == 0:
             z = f"min(1.0+{zoom}*on/{frames},{zmax:.4f})"
-        else:           # zoom out
+        else:
             z = f"max({zmax:.4f}-{zoom}*on/{frames},1.0)"
         vf = (f"scale=2160:3840:flags=lanczos,"
               f"zoompan=z='{z}':x='iw/2-(iw/zoom)/2':y='ih/2-(ih/zoom)/2':"
               f"d={frames}:s={W}x{H}:fps={fps},format=yuv420p")
-        _ff(["-i", str(img), "-vf", vf, "-frames:v", str(frames),
-             "-c:v", "libx264", "-preset", "veryfast", "-crf", "17",
-             "-r", str(fps), str(out)], log)
+        run_ffmpeg(["-i", str(img), "-vf", vf, "-frames:v", str(frames),
+                    "-c:v", "libx264", "-preset", "veryfast", "-crf", "17",
+                    "-r", str(fps), str(out)], log)
         segs.append(out)
     return segs
 
 
 def concat_segments(run, segs):
-    lst = run.p("segments") / "list.txt"
-    lst.write_text("".join(f"file '{s}'\n" for s in segs))
+    lst = write_concat_list(segs, run.p("segments") / "list.txt")
     out = run.p("video_only.mp4")
-    _ff(["-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy", str(out)])
+    run_ffmpeg(["-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy", str(out)])
     return out
 
 
 def final_mix(cfg, run, video_only, voice, music_path, ass_path, total, log=print):
-    """Captions + progress bar + fades + ducked music → final.mp4."""
+    """Captions + ASS progress bar + fades + ducked music → final.mp4."""
     fps = int(cfg("video.fps", 30))
     tail = float(cfg("video.tail_padding", 0.8))
     vtotal = total + tail
+    fontsdir = filter_path(cfg.root / "assets" / "fonts")
+    ass = filter_path(ass_path)
 
     vchain = (
         f"[0:v]tpad=stop_mode=clone:stop_duration={tail:.2f},"
-        f"ass={ass_path}:fontsdir={cfg.root / 'assets' / 'fonts'},"
+        f"ass='{ass}':fontsdir='{fontsdir}',"
         f"fade=t=in:st=0:d=0.25,fade=t=out:st={vtotal - 0.4:.3f}:d=0.4,"
         f"format=yuv420p[v]"
     )
@@ -88,7 +74,7 @@ def final_mix(cfg, run, video_only, voice, music_path, ass_path, total, log=prin
         inputs = ["-i", str(video_only), "-i", str(voice)]
 
     final = run.p("final.mp4")
-    _ff(inputs + [
+    run_ffmpeg(inputs + [
         "-filter_complex", vchain + ";" + achain,
         "-map", "[v]", "-map", "[aout]",
         "-c:v", "libx264", "-preset", "medium", "-crf", "18",
@@ -105,18 +91,18 @@ def render(cfg, run, script, beat_images, durations, voice, words, music_path, f
     final = run.p("final.mp4")
     total = sum(durations)
     if final.exists() and ass.exists() and not force:
-        log("  ✓ final.mp4 already rendered (use --force to re-render)")
+        log("  final.mp4 already rendered (use --force to re-render)")
         return final, probe_duration(final)
 
     from .captions import build_ass
     build_ass(cfg, words, total, ass)
 
-    log(f"  · rendering {len(beat_images)} Ken Burns segments…")
+    log(f"  rendering {len(beat_images)} Ken Burns segments")
     segs = build_segments(cfg, run, beat_images, durations, log)
     video_only = concat_segments(run, segs)
-    log("  · mixing voice, music, captions…")
+    log("  mixing voice, music, captions + progress bar")
     final = final_mix(cfg, run, video_only, voice, music_path, ass, total, log)
     dur = probe_duration(final)
     size_mb = final.stat().st_size / 1e6
-    log(f"  ✦ rendered final.mp4  ({dur:.1f}s, {size_mb:.1f} MB)")
+    log(f"  rendered final.mp4  ({dur:.1f}s, {size_mb:.1f} MB)")
     return final, dur
