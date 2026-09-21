@@ -1,6 +1,6 @@
 # Windows setup
 
-This repo is meant to run on `C:\\Users\\<you>\\Desktop\\yt-pipeline` (or any local folder).
+This repo is meant to run on `C:\Users\<you>\Desktop\yt-pipeline` (or any local folder).
 
 ## 1. Tools
 
@@ -17,20 +17,28 @@ ffmpeg -version
 ffprobe -version
 ```
 
-If `ffmpeg` is still missing, install to `C:\\ffmpeg` and add `C:\\ffmpeg\\bin` to PATH, or set `FFMPEG_PATH` to that folder.
+If `ffmpeg` is still missing, install to `C:\ffmpeg` and add `C:\ffmpeg\bin` to PATH, or set `FFMPEG_PATH` to that folder.
 
 ## 2. Project
 
 ```powershell
-cd C:\\Users\\louis\\Desktop\\yt-pipeline
+cd C:\Users\louis\Desktop\yt-pipeline
 python -m venv .venv
-.\\.venv\\Scripts\\Activate.ps1
+.\ .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 copy .env.example .env
 python run.py doctor
 ```
 
-`doctor` must show ffmpeg + fonts as ✔ before you render.
+Wait — activation is:
+
+```powershell
+.\ .venv\Scripts\Activate.ps1
+```
+
+If execution policy blocks it: `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`.
+
+`doctor` must show ffmpeg + fonts as OK before you render.
 
 ## 3. First Short (no upload)
 
@@ -38,7 +46,7 @@ python run.py doctor
 python run.py run --no-upload --idea "You're not lazy — your brain is scared"
 ```
 
-Watch `output\\<run-id>\\final.mp4`. Resume without redoing TTS/images:
+Watch `output\<run-id>\final.mp4`. Resume without redoing TTS/images:
 
 ```powershell
 python run.py run --run-id <run-id> --no-upload
