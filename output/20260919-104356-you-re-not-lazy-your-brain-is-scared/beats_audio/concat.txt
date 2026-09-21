@@ -1,0 +1,6 @@
+file '/tmp/arena/tenants/2e89da92-f22c-4ae1-b12b-63a3bb92b412/sessions/f95d9e7c-d8eb-4cce-9074-f1d632b81a16/workspace/yt-pipeline/output/20260919-104356-you-re-not-lazy-your-brain-is-scared/beats_audio/b00.wav'
+file '/tmp/arena/tenants/2e89da92-f22c-4ae1-b12b-63a3bb92b412/sessions/f95d9e7c-d8eb-4cce-9074-f1d632b81a16/workspace/yt-pipeline/output/20260919-104356-you-re-not-lazy-your-brain-is-scared/beats_audio/b01.wav'
+file '/tmp/arena/tenants/2e89da92-f22c-4ae1-b12b-63a3bb92b412/sessions/f95d9e7c-d8eb-4cce-9074-f1d632b81a16/workspace/yt-pipeline/output/20260919-104356-you-re-not-lazy-your-brain-is-scared/beats_audio/b02.wav'
+file '/tmp/arena/tenants/2e89da92-f22c-4ae1-b12b-63a3bb92b412/sessions/f95d9e7c-d8eb-4cce-9074-f1d632b81a16/workspace/yt-pipeline/output/20260919-104356-you-re-not-lazy-your-brain-is-scared/beats_audio/b03.wav'
+file '/tmp/arena/tenants/2e89da92-f22c-4ae1-b12b-63a3bb92b412/sessions/f95d9e7c-d8eb-4cce-9074-f1d632b81a16/workspace/yt-pipeline/output/20260919-104356-you-re-not-lazy-your-brain-is-scared/beats_audio/b04.wav'
+file '/tmp/arena/tenants/2e89da92-f22c-4ae1-b12b-63a3bb92b412/sessions/f95d9e7c-d8eb-4cce-9074-f1d632b81a16/workspace/yt-pipeline/output/20260919-104356-you-re-not-lazy-your-brain-is-scared/beats_audio/b05.wav'

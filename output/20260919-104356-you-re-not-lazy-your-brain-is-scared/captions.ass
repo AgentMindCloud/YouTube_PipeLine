@@ -1,0 +1,301 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.709
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Archivo Black,88,&H00FFFFFF&,&H00FFFFFF&,&H00000000,&HA0000000,-1,0,0,0,100,100,0.5,0,1,5,2.2,5,60,60,0,1
+Style: Bar,Archivo Black,10,&H00FFFFFF&,&H00FFFFFF&,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 2,0:00:00.00,0:00:00.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 2 0 2 10 0 10{\p0}
+Dialogue: 2,0:00:00.25,0:00:00.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 8 0 8 10 0 10{\p0}
+Dialogue: 2,0:00:00.50,0:00:00.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 14 0 14 10 0 10{\p0}
+Dialogue: 2,0:00:00.75,0:00:01.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 20 0 20 10 0 10{\p0}
+Dialogue: 2,0:00:01.00,0:00:01.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 26 0 26 10 0 10{\p0}
+Dialogue: 2,0:00:01.25,0:00:01.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 32 0 32 10 0 10{\p0}
+Dialogue: 2,0:00:01.50,0:00:01.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 38 0 38 10 0 10{\p0}
+Dialogue: 2,0:00:01.75,0:00:02.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 44 0 44 10 0 10{\p0}
+Dialogue: 2,0:00:02.00,0:00:02.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 50 0 50 10 0 10{\p0}
+Dialogue: 2,0:00:02.25,0:00:02.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 56 0 56 10 0 10{\p0}
+Dialogue: 2,0:00:02.50,0:00:02.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 62 0 62 10 0 10{\p0}
+Dialogue: 2,0:00:02.75,0:00:03.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 68 0 68 10 0 10{\p0}
+Dialogue: 2,0:00:03.00,0:00:03.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 74 0 74 10 0 10{\p0}
+Dialogue: 2,0:00:03.25,0:00:03.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 79 0 79 10 0 10{\p0}
+Dialogue: 2,0:00:03.50,0:00:03.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 85 0 85 10 0 10{\p0}
+Dialogue: 2,0:00:03.75,0:00:04.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 91 0 91 10 0 10{\p0}
+Dialogue: 2,0:00:04.00,0:00:04.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 97 0 97 10 0 10{\p0}
+Dialogue: 2,0:00:04.25,0:00:04.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 103 0 103 10 0 10{\p0}
+Dialogue: 2,0:00:04.50,0:00:04.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 109 0 109 10 0 10{\p0}
+Dialogue: 2,0:00:04.75,0:00:05.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 115 0 115 10 0 10{\p0}
+Dialogue: 2,0:00:05.00,0:00:05.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 121 0 121 10 0 10{\p0}
+Dialogue: 2,0:00:05.25,0:00:05.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 127 0 127 10 0 10{\p0}
+Dialogue: 2,0:00:05.50,0:00:05.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 133 0 133 10 0 10{\p0}
+Dialogue: 2,0:00:05.75,0:00:06.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 139 0 139 10 0 10{\p0}
+Dialogue: 2,0:00:06.00,0:00:06.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 145 0 145 10 0 10{\p0}
+Dialogue: 2,0:00:06.25,0:00:06.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 150 0 150 10 0 10{\p0}
+Dialogue: 2,0:00:06.50,0:00:06.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 156 0 156 10 0 10{\p0}
+Dialogue: 2,0:00:06.75,0:00:07.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 162 0 162 10 0 10{\p0}
+Dialogue: 2,0:00:07.00,0:00:07.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 168 0 168 10 0 10{\p0}
+Dialogue: 2,0:00:07.25,0:00:07.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 174 0 174 10 0 10{\p0}
+Dialogue: 2,0:00:07.50,0:00:07.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 180 0 180 10 0 10{\p0}
+Dialogue: 2,0:00:07.75,0:00:08.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 186 0 186 10 0 10{\p0}
+Dialogue: 2,0:00:08.00,0:00:08.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 192 0 192 10 0 10{\p0}
+Dialogue: 2,0:00:08.25,0:00:08.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 198 0 198 10 0 10{\p0}
+Dialogue: 2,0:00:08.50,0:00:08.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 204 0 204 10 0 10{\p0}
+Dialogue: 2,0:00:08.75,0:00:09.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 210 0 210 10 0 10{\p0}
+Dialogue: 2,0:00:09.00,0:00:09.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 216 0 216 10 0 10{\p0}
+Dialogue: 2,0:00:09.25,0:00:09.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 222 0 222 10 0 10{\p0}
+Dialogue: 2,0:00:09.50,0:00:09.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 227 0 227 10 0 10{\p0}
+Dialogue: 2,0:00:09.75,0:00:10.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 233 0 233 10 0 10{\p0}
+Dialogue: 2,0:00:10.00,0:00:10.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 239 0 239 10 0 10{\p0}
+Dialogue: 2,0:00:10.25,0:00:10.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 245 0 245 10 0 10{\p0}
+Dialogue: 2,0:00:10.50,0:00:10.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 251 0 251 10 0 10{\p0}
+Dialogue: 2,0:00:10.75,0:00:11.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 257 0 257 10 0 10{\p0}
+Dialogue: 2,0:00:11.00,0:00:11.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 263 0 263 10 0 10{\p0}
+Dialogue: 2,0:00:11.25,0:00:11.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 269 0 269 10 0 10{\p0}
+Dialogue: 2,0:00:11.50,0:00:11.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 275 0 275 10 0 10{\p0}
+Dialogue: 2,0:00:11.75,0:00:12.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 281 0 281 10 0 10{\p0}
+Dialogue: 2,0:00:12.00,0:00:12.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 287 0 287 10 0 10{\p0}
+Dialogue: 2,0:00:12.25,0:00:12.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 293 0 293 10 0 10{\p0}
+Dialogue: 2,0:00:12.50,0:00:12.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 299 0 299 10 0 10{\p0}
+Dialogue: 2,0:00:12.75,0:00:13.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 304 0 304 10 0 10{\p0}
+Dialogue: 2,0:00:13.00,0:00:13.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 310 0 310 10 0 10{\p0}
+Dialogue: 2,0:00:13.25,0:00:13.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 316 0 316 10 0 10{\p0}
+Dialogue: 2,0:00:13.50,0:00:13.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 322 0 322 10 0 10{\p0}
+Dialogue: 2,0:00:13.75,0:00:14.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 328 0 328 10 0 10{\p0}
+Dialogue: 2,0:00:14.00,0:00:14.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 334 0 334 10 0 10{\p0}
+Dialogue: 2,0:00:14.25,0:00:14.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 340 0 340 10 0 10{\p0}
+Dialogue: 2,0:00:14.50,0:00:14.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 346 0 346 10 0 10{\p0}
+Dialogue: 2,0:00:14.75,0:00:15.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 352 0 352 10 0 10{\p0}
+Dialogue: 2,0:00:15.00,0:00:15.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 358 0 358 10 0 10{\p0}
+Dialogue: 2,0:00:15.25,0:00:15.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 364 0 364 10 0 10{\p0}
+Dialogue: 2,0:00:15.50,0:00:15.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 370 0 370 10 0 10{\p0}
+Dialogue: 2,0:00:15.75,0:00:16.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 375 0 375 10 0 10{\p0}
+Dialogue: 2,0:00:16.00,0:00:16.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 381 0 381 10 0 10{\p0}
+Dialogue: 2,0:00:16.25,0:00:16.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 387 0 387 10 0 10{\p0}
+Dialogue: 2,0:00:16.50,0:00:16.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 393 0 393 10 0 10{\p0}
+Dialogue: 2,0:00:16.75,0:00:17.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 399 0 399 10 0 10{\p0}
+Dialogue: 2,0:00:17.00,0:00:17.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 405 0 405 10 0 10{\p0}
+Dialogue: 2,0:00:17.25,0:00:17.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 411 0 411 10 0 10{\p0}
+Dialogue: 2,0:00:17.50,0:00:17.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 417 0 417 10 0 10{\p0}
+Dialogue: 2,0:00:17.75,0:00:18.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 423 0 423 10 0 10{\p0}
+Dialogue: 2,0:00:18.00,0:00:18.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 429 0 429 10 0 10{\p0}
+Dialogue: 2,0:00:18.25,0:00:18.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 435 0 435 10 0 10{\p0}
+Dialogue: 2,0:00:18.50,0:00:18.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 441 0 441 10 0 10{\p0}
+Dialogue: 2,0:00:18.75,0:00:19.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 447 0 447 10 0 10{\p0}
+Dialogue: 2,0:00:19.00,0:00:19.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 452 0 452 10 0 10{\p0}
+Dialogue: 2,0:00:19.25,0:00:19.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 458 0 458 10 0 10{\p0}
+Dialogue: 2,0:00:19.50,0:00:19.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 464 0 464 10 0 10{\p0}
+Dialogue: 2,0:00:19.75,0:00:20.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 470 0 470 10 0 10{\p0}
+Dialogue: 2,0:00:20.00,0:00:20.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 476 0 476 10 0 10{\p0}
+Dialogue: 2,0:00:20.25,0:00:20.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 482 0 482 10 0 10{\p0}
+Dialogue: 2,0:00:20.50,0:00:20.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 488 0 488 10 0 10{\p0}
+Dialogue: 2,0:00:20.75,0:00:21.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 494 0 494 10 0 10{\p0}
+Dialogue: 2,0:00:21.00,0:00:21.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 500 0 500 10 0 10{\p0}
+Dialogue: 2,0:00:21.25,0:00:21.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 506 0 506 10 0 10{\p0}
+Dialogue: 2,0:00:21.50,0:00:21.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 512 0 512 10 0 10{\p0}
+Dialogue: 2,0:00:21.75,0:00:22.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 518 0 518 10 0 10{\p0}
+Dialogue: 2,0:00:22.00,0:00:22.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 524 0 524 10 0 10{\p0}
+Dialogue: 2,0:00:22.25,0:00:22.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 529 0 529 10 0 10{\p0}
+Dialogue: 2,0:00:22.50,0:00:22.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 535 0 535 10 0 10{\p0}
+Dialogue: 2,0:00:22.75,0:00:23.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 541 0 541 10 0 10{\p0}
+Dialogue: 2,0:00:23.00,0:00:23.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 547 0 547 10 0 10{\p0}
+Dialogue: 2,0:00:23.25,0:00:23.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 553 0 553 10 0 10{\p0}
+Dialogue: 2,0:00:23.50,0:00:23.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 559 0 559 10 0 10{\p0}
+Dialogue: 2,0:00:23.75,0:00:24.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 565 0 565 10 0 10{\p0}
+Dialogue: 2,0:00:24.00,0:00:24.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 571 0 571 10 0 10{\p0}
+Dialogue: 2,0:00:24.25,0:00:24.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 577 0 577 10 0 10{\p0}
+Dialogue: 2,0:00:24.50,0:00:24.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 583 0 583 10 0 10{\p0}
+Dialogue: 2,0:00:24.75,0:00:25.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 589 0 589 10 0 10{\p0}
+Dialogue: 2,0:00:25.00,0:00:25.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 595 0 595 10 0 10{\p0}
+Dialogue: 2,0:00:25.25,0:00:25.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 600 0 600 10 0 10{\p0}
+Dialogue: 2,0:00:25.50,0:00:25.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 606 0 606 10 0 10{\p0}
+Dialogue: 2,0:00:25.75,0:00:26.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 612 0 612 10 0 10{\p0}
+Dialogue: 2,0:00:26.00,0:00:26.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 618 0 618 10 0 10{\p0}
+Dialogue: 2,0:00:26.25,0:00:26.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 624 0 624 10 0 10{\p0}
+Dialogue: 2,0:00:26.50,0:00:26.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 630 0 630 10 0 10{\p0}
+Dialogue: 2,0:00:26.75,0:00:27.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 636 0 636 10 0 10{\p0}
+Dialogue: 2,0:00:27.00,0:00:27.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 642 0 642 10 0 10{\p0}
+Dialogue: 2,0:00:27.25,0:00:27.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 648 0 648 10 0 10{\p0}
+Dialogue: 2,0:00:27.50,0:00:27.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 654 0 654 10 0 10{\p0}
+Dialogue: 2,0:00:27.75,0:00:28.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 660 0 660 10 0 10{\p0}
+Dialogue: 2,0:00:28.00,0:00:28.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 666 0 666 10 0 10{\p0}
+Dialogue: 2,0:00:28.25,0:00:28.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 672 0 672 10 0 10{\p0}
+Dialogue: 2,0:00:28.50,0:00:28.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 677 0 677 10 0 10{\p0}
+Dialogue: 2,0:00:28.75,0:00:29.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 683 0 683 10 0 10{\p0}
+Dialogue: 2,0:00:29.00,0:00:29.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 689 0 689 10 0 10{\p0}
+Dialogue: 2,0:00:29.25,0:00:29.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 695 0 695 10 0 10{\p0}
+Dialogue: 2,0:00:29.50,0:00:29.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 701 0 701 10 0 10{\p0}
+Dialogue: 2,0:00:29.75,0:00:30.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 707 0 707 10 0 10{\p0}
+Dialogue: 2,0:00:30.00,0:00:30.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 713 0 713 10 0 10{\p0}
+Dialogue: 2,0:00:30.25,0:00:30.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 719 0 719 10 0 10{\p0}
+Dialogue: 2,0:00:30.50,0:00:30.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 725 0 725 10 0 10{\p0}
+Dialogue: 2,0:00:30.75,0:00:31.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 731 0 731 10 0 10{\p0}
+Dialogue: 2,0:00:31.00,0:00:31.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 737 0 737 10 0 10{\p0}
+Dialogue: 2,0:00:31.25,0:00:31.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 743 0 743 10 0 10{\p0}
+Dialogue: 2,0:00:31.50,0:00:31.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 749 0 749 10 0 10{\p0}
+Dialogue: 2,0:00:31.75,0:00:32.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 754 0 754 10 0 10{\p0}
+Dialogue: 2,0:00:32.00,0:00:32.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 760 0 760 10 0 10{\p0}
+Dialogue: 2,0:00:32.25,0:00:32.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 766 0 766 10 0 10{\p0}
+Dialogue: 2,0:00:32.50,0:00:32.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 772 0 772 10 0 10{\p0}
+Dialogue: 2,0:00:32.75,0:00:33.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 778 0 778 10 0 10{\p0}
+Dialogue: 2,0:00:33.00,0:00:33.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 784 0 784 10 0 10{\p0}
+Dialogue: 2,0:00:33.25,0:00:33.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 790 0 790 10 0 10{\p0}
+Dialogue: 2,0:00:33.50,0:00:33.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 796 0 796 10 0 10{\p0}
+Dialogue: 2,0:00:33.75,0:00:34.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 802 0 802 10 0 10{\p0}
+Dialogue: 2,0:00:34.00,0:00:34.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 808 0 808 10 0 10{\p0}
+Dialogue: 2,0:00:34.25,0:00:34.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 814 0 814 10 0 10{\p0}
+Dialogue: 2,0:00:34.50,0:00:34.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 820 0 820 10 0 10{\p0}
+Dialogue: 2,0:00:34.75,0:00:35.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 825 0 825 10 0 10{\p0}
+Dialogue: 2,0:00:35.00,0:00:35.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 831 0 831 10 0 10{\p0}
+Dialogue: 2,0:00:35.25,0:00:35.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 837 0 837 10 0 10{\p0}
+Dialogue: 2,0:00:35.50,0:00:35.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 843 0 843 10 0 10{\p0}
+Dialogue: 2,0:00:35.75,0:00:36.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 849 0 849 10 0 10{\p0}
+Dialogue: 2,0:00:36.00,0:00:36.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 855 0 855 10 0 10{\p0}
+Dialogue: 2,0:00:36.25,0:00:36.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 861 0 861 10 0 10{\p0}
+Dialogue: 2,0:00:36.50,0:00:36.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 867 0 867 10 0 10{\p0}
+Dialogue: 2,0:00:36.75,0:00:37.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 873 0 873 10 0 10{\p0}
+Dialogue: 2,0:00:37.00,0:00:37.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 879 0 879 10 0 10{\p0}
+Dialogue: 2,0:00:37.25,0:00:37.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 885 0 885 10 0 10{\p0}
+Dialogue: 2,0:00:37.50,0:00:37.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 891 0 891 10 0 10{\p0}
+Dialogue: 2,0:00:37.75,0:00:38.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 897 0 897 10 0 10{\p0}
+Dialogue: 2,0:00:38.00,0:00:38.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 902 0 902 10 0 10{\p0}
+Dialogue: 2,0:00:38.25,0:00:38.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 908 0 908 10 0 10{\p0}
+Dialogue: 2,0:00:38.50,0:00:38.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 914 0 914 10 0 10{\p0}
+Dialogue: 2,0:00:38.75,0:00:39.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 920 0 920 10 0 10{\p0}
+Dialogue: 2,0:00:39.00,0:00:39.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 926 0 926 10 0 10{\p0}
+Dialogue: 2,0:00:39.25,0:00:39.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 932 0 932 10 0 10{\p0}
+Dialogue: 2,0:00:39.50,0:00:39.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 938 0 938 10 0 10{\p0}
+Dialogue: 2,0:00:39.75,0:00:40.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 944 0 944 10 0 10{\p0}
+Dialogue: 2,0:00:40.00,0:00:40.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 950 0 950 10 0 10{\p0}
+Dialogue: 2,0:00:40.25,0:00:40.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 956 0 956 10 0 10{\p0}
+Dialogue: 2,0:00:40.50,0:00:40.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 962 0 962 10 0 10{\p0}
+Dialogue: 2,0:00:40.75,0:00:41.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 968 0 968 10 0 10{\p0}
+Dialogue: 2,0:00:41.00,0:00:41.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 974 0 974 10 0 10{\p0}
+Dialogue: 2,0:00:41.25,0:00:41.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 979 0 979 10 0 10{\p0}
+Dialogue: 2,0:00:41.50,0:00:41.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 985 0 985 10 0 10{\p0}
+Dialogue: 2,0:00:41.75,0:00:42.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 991 0 991 10 0 10{\p0}
+Dialogue: 2,0:00:42.00,0:00:42.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 997 0 997 10 0 10{\p0}
+Dialogue: 2,0:00:42.25,0:00:42.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 1003 0 1003 10 0 10{\p0}
+Dialogue: 2,0:00:42.50,0:00:42.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 1009 0 1009 10 0 10{\p0}
+Dialogue: 2,0:00:42.75,0:00:43.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 1015 0 1015 10 0 10{\p0}
+Dialogue: 2,0:00:43.00,0:00:43.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 1021 0 1021 10 0 10{\p0}
+Dialogue: 2,0:00:43.25,0:00:43.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 1027 0 1027 10 0 10{\p0}
+Dialogue: 2,0:00:43.50,0:00:43.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 1033 0 1033 10 0 10{\p0}
+Dialogue: 2,0:00:43.75,0:00:44.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 1039 0 1039 10 0 10{\p0}
+Dialogue: 2,0:00:44.00,0:00:44.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 1045 0 1045 10 0 10{\p0}
+Dialogue: 2,0:00:44.25,0:00:44.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 1050 0 1050 10 0 10{\p0}
+Dialogue: 2,0:00:44.50,0:00:44.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 1056 0 1056 10 0 10{\p0}
+Dialogue: 2,0:00:44.75,0:00:45.01,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 1062 0 1062 10 0 10{\p0}
+Dialogue: 2,0:00:45.00,0:00:45.26,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 1068 0 1068 10 0 10{\p0}
+Dialogue: 2,0:00:45.25,0:00:45.51,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 1074 0 1074 10 0 10{\p0}
+Dialogue: 2,0:00:45.50,0:00:45.76,Bar,,0,0,0,,{\an7\pos(0,1910)\alpha&H26&\p1}m 0 0 l 1080 0 1080 10 0 10{\p0}
+Dialogue: 0,0:00:00.10,0:00:00.29,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}YOU'RE {\c&H00FFFFFF&}NOT {\c&H00FFFFFF&}LAZY
+Dialogue: 0,0:00:00.29,0:00:00.53,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}YOU'RE {\c&H0000D4FF&}NOT {\c&H00FFFFFF&}LAZY
+Dialogue: 0,0:00:00.52,0:00:01.15,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}YOU'RE {\c&H00FFFFFF&}NOT {\c&H0000D4FF&}LAZY
+Dialogue: 0,0:00:01.82,0:00:02.06,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}YOUR {\c&H00FFFFFF&}BRAIN {\c&H00FFFFFF&}IS
+Dialogue: 0,0:00:02.05,0:00:02.43,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}YOUR {\c&H0000D4FF&}BRAIN {\c&H00FFFFFF&}IS
+Dialogue: 0,0:00:02.42,0:00:02.55,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}YOUR {\c&H00FFFFFF&}BRAIN {\c&H0000D4FF&}IS
+Dialogue: 0,0:00:02.57,0:00:03.13,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}GENUINELY {\c&H00FFFFFF&}TERRIFIED {\c&H00FFFFFF&}OF
+Dialogue: 0,0:00:03.12,0:00:03.71,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}GENUINELY {\c&H0000D4FF&}TERRIFIED {\c&H00FFFFFF&}OF
+Dialogue: 0,0:00:03.70,0:00:03.80,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}GENUINELY {\c&H00FFFFFF&}TERRIFIED {\c&H0000D4FF&}OF
+Dialogue: 0,0:00:03.82,0:00:04.03,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}BIG {\c&H00FFFFFF&}TASKS {\c&H00FFFFFF&}AND
+Dialogue: 0,0:00:04.02,0:00:04.56,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}BIG {\c&H0000D4FF&}TASKS {\c&H00FFFFFF&}AND
+Dialogue: 0,0:00:04.79,0:00:04.90,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}BIG {\c&H00FFFFFF&}TASKS {\c&H0000D4FF&}AND
+Dialogue: 0,0:00:04.92,0:00:05.10,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}THERE'S {\c&H00FFFFFF&}A {\c&H00FFFFFF&}TWOMINUTE
+Dialogue: 0,0:00:05.09,0:00:05.19,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}THERE'S {\c&H0000D4FF&}A {\c&H00FFFFFF&}TWOMINUTE
+Dialogue: 0,0:00:05.18,0:00:05.56,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}THERE'S {\c&H00FFFFFF&}A {\c&H0000D4FF&}TWOMINUTE
+Dialogue: 0,0:00:05.58,0:00:06.21,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}FIX
+Dialogue: 0,0:00:06.99,0:00:07.19,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}IT'S {\c&H00FFFFFF&}CALLED {\c&H00FFFFFF&}THE
+Dialogue: 0,0:00:07.19,0:00:07.47,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}IT'S {\c&H0000D4FF&}CALLED {\c&H00FFFFFF&}THE
+Dialogue: 0,0:00:07.46,0:00:07.53,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}IT'S {\c&H00FFFFFF&}CALLED {\c&H0000D4FF&}THE
+Dialogue: 0,0:00:07.55,0:00:07.98,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}TWOMINUTE {\c&H00FFFFFF&}RULE {\c&H00FFFFFF&}SHRINK
+Dialogue: 0,0:00:07.98,0:00:08.36,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}TWOMINUTE {\c&H0000D4FF&}RULE {\c&H00FFFFFF&}SHRINK
+Dialogue: 0,0:00:09.15,0:00:09.54,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}TWOMINUTE {\c&H00FFFFFF&}RULE {\c&H0000D4FF&}SHRINK
+Dialogue: 0,0:00:09.56,0:00:09.77,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}ANY {\c&H00FFFFFF&}TASK {\c&H00FFFFFF&}UNTIL
+Dialogue: 0,0:00:09.77,0:00:10.17,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}ANY {\c&H0000D4FF&}TASK {\c&H00FFFFFF&}UNTIL
+Dialogue: 0,0:00:10.17,0:00:10.43,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}ANY {\c&H00FFFFFF&}TASK {\c&H0000D4FF&}UNTIL
+Dialogue: 0,0:00:10.45,0:00:10.55,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}IT {\c&H00FFFFFF&}TAKES {\c&H00FFFFFF&}TWO
+Dialogue: 0,0:00:10.54,0:00:10.85,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}IT {\c&H0000D4FF&}TAKES {\c&H00FFFFFF&}TWO
+Dialogue: 0,0:00:10.84,0:00:11.00,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}IT {\c&H00FFFFFF&}TAKES {\c&H0000D4FF&}TWO
+Dialogue: 0,0:00:11.02,0:00:11.33,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}MINUTES {\c&H00FFFFFF&}OR {\c&H00FFFFFF&}LESS
+Dialogue: 0,0:00:11.32,0:00:11.47,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}MINUTES {\c&H0000D4FF&}OR {\c&H00FFFFFF&}LESS
+Dialogue: 0,0:00:11.46,0:00:12.06,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}MINUTES {\c&H00FFFFFF&}OR {\c&H0000D4FF&}LESS
+Dialogue: 0,0:00:12.74,0:00:13.05,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}THAT'S {\c&H00FFFFFF&}IT
+Dialogue: 0,0:00:13.04,0:00:13.41,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}THAT'S {\c&H0000D4FF&}IT
+Dialogue: 0,0:00:14.19,0:00:14.49,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}WRITE {\c&H00FFFFFF&}THE {\c&H00FFFFFF&}ESSAY
+Dialogue: 0,0:00:14.48,0:00:14.58,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}WRITE {\c&H0000D4FF&}THE {\c&H00FFFFFF&}ESSAY
+Dialogue: 0,0:00:14.57,0:00:15.16,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}WRITE {\c&H00FFFFFF&}THE {\c&H0000D4FF&}ESSAY
+Dialogue: 0,0:00:15.18,0:00:15.71,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}BECOMES {\c&H00FFFFFF&}OPEN {\c&H00FFFFFF&}THE
+Dialogue: 0,0:00:15.79,0:00:16.08,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}BECOMES {\c&H0000D4FF&}OPEN {\c&H00FFFFFF&}THE
+Dialogue: 0,0:00:16.07,0:00:16.13,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}BECOMES {\c&H00FFFFFF&}OPEN {\c&H0000D4FF&}THE
+Dialogue: 0,0:00:16.15,0:00:16.78,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}DOCUMENT {\c&H00FFFFFF&}GET {\c&H00FFFFFF&}FIT
+Dialogue: 0,0:00:17.57,0:00:17.79,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}DOCUMENT {\c&H0000D4FF&}GET {\c&H00FFFFFF&}FIT
+Dialogue: 0,0:00:17.78,0:00:18.14,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}DOCUMENT {\c&H00FFFFFF&}GET {\c&H0000D4FF&}FIT
+Dialogue: 0,0:00:18.16,0:00:18.70,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}BECOMES {\c&H00FFFFFF&}PUT {\c&H00FFFFFF&}ON
+Dialogue: 0,0:00:18.81,0:00:19.00,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}BECOMES {\c&H0000D4FF&}PUT {\c&H00FFFFFF&}ON
+Dialogue: 0,0:00:18.99,0:00:19.14,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}BECOMES {\c&H00FFFFFF&}PUT {\c&H0000D4FF&}ON
+Dialogue: 0,0:00:19.16,0:00:19.30,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}YOUR {\c&H00FFFFFF&}SHOES
+Dialogue: 0,0:00:19.29,0:00:19.98,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}YOUR {\c&H0000D4FF&}SHOES
+Dialogue: 0,0:00:20.76,0:00:21.06,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}HERE'S {\c&H00FFFFFF&}WHY {\c&H00FFFFFF&}IT
+Dialogue: 0,0:00:21.06,0:00:21.28,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}HERE'S {\c&H0000D4FF&}WHY {\c&H00FFFFFF&}IT
+Dialogue: 0,0:00:21.27,0:00:21.35,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}HERE'S {\c&H00FFFFFF&}WHY {\c&H0000D4FF&}IT
+Dialogue: 0,0:00:21.37,0:00:21.82,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}WORKS {\c&H00FFFFFF&}YOUR {\c&H00FFFFFF&}BRAIN
+Dialogue: 0,0:00:22.00,0:00:22.18,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}WORKS {\c&H0000D4FF&}YOUR {\c&H00FFFFFF&}BRAIN
+Dialogue: 0,0:00:22.18,0:00:22.49,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}WORKS {\c&H00FFFFFF&}YOUR {\c&H0000D4FF&}BRAIN
+Dialogue: 0,0:00:22.51,0:00:22.97,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}RESISTS {\c&H00FFFFFF&}STARTING {\c&H00FFFFFF&}NOT
+Dialogue: 0,0:00:22.97,0:00:23.39,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}RESISTS {\c&H0000D4FF&}STARTING {\c&H00FFFFFF&}NOT
+Dialogue: 0,0:00:23.60,0:00:23.83,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}RESISTS {\c&H00FFFFFF&}STARTING {\c&H0000D4FF&}NOT
+Dialogue: 0,0:00:23.85,0:00:24.27,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}DOING {\c&H00FFFFFF&}TWO {\c&H00FFFFFF&}MINUTES
+Dialogue: 0,0:00:25.06,0:00:25.28,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}DOING {\c&H0000D4FF&}TWO {\c&H00FFFFFF&}MINUTES
+Dialogue: 0,0:00:25.27,0:00:25.60,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}DOING {\c&H00FFFFFF&}TWO {\c&H0000D4FF&}MINUTES
+Dialogue: 0,0:00:25.62,0:00:25.96,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}SNEAKS {\c&H00FFFFFF&}STRAIGHT {\c&H00FFFFFF&}PAST
+Dialogue: 0,0:00:25.95,0:00:26.30,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}SNEAKS {\c&H0000D4FF&}STRAIGHT {\c&H00FFFFFF&}PAST
+Dialogue: 0,0:00:26.29,0:00:26.65,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}SNEAKS {\c&H00FFFFFF&}STRAIGHT {\c&H0000D4FF&}PAST
+Dialogue: 0,0:00:26.67,0:00:26.77,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}THE {\c&H00FFFFFF&}FEAR {\c&H00FFFFFF&}RESPONSE
+Dialogue: 0,0:00:26.76,0:00:27.08,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}THE {\c&H0000D4FF&}FEAR {\c&H00FFFFFF&}RESPONSE
+Dialogue: 0,0:00:27.07,0:00:27.88,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}THE {\c&H00FFFFFF&}FEAR {\c&H0000D4FF&}RESPONSE
+Dialogue: 0,0:00:28.66,0:00:28.84,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}AND {\c&H00FFFFFF&}MOTIVATION {\c&H00FFFFFF&}DOESN'T
+Dialogue: 0,0:00:28.83,0:00:29.47,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}AND {\c&H0000D4FF&}MOTIVATION {\c&H00FFFFFF&}DOESN'T
+Dialogue: 0,0:00:29.46,0:00:29.71,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}AND {\c&H00FFFFFF&}MOTIVATION {\c&H0000D4FF&}DOESN'T
+Dialogue: 0,0:00:29.73,0:00:30.09,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}CREATE {\c&H00FFFFFF&}ACTION {\c&H00FFFFFF&}ACTION
+Dialogue: 0,0:00:30.08,0:00:30.53,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}CREATE {\c&H0000D4FF&}ACTION {\c&H00FFFFFF&}ACTION
+Dialogue: 0,0:00:30.73,0:00:31.08,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}CREATE {\c&H00FFFFFF&}ACTION {\c&H0000D4FF&}ACTION
+Dialogue: 0,0:00:31.10,0:00:31.52,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}CREATES {\c&H00FFFFFF&}MOTIVATION {\c&H00FFFFFF&}ONCE
+Dialogue: 0,0:00:31.51,0:00:32.24,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}CREATES {\c&H0000D4FF&}MOTIVATION {\c&H00FFFFFF&}ONCE
+Dialogue: 0,0:00:33.03,0:00:33.33,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}CREATES {\c&H00FFFFFF&}MOTIVATION {\c&H0000D4FF&}ONCE
+Dialogue: 0,0:00:33.35,0:00:33.46,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}YOU {\c&H00FFFFFF&}START {\c&H00FFFFFF&}MOMENTUM
+Dialogue: 0,0:00:33.45,0:00:33.86,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}YOU {\c&H0000D4FF&}START {\c&H00FFFFFF&}MOMENTUM
+Dialogue: 0,0:00:34.02,0:00:34.54,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}YOU {\c&H00FFFFFF&}START {\c&H0000D4FF&}MOMENTUM
+Dialogue: 0,0:00:34.56,0:00:34.82,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}DOES {\c&H00FFFFFF&}THE {\c&H00FFFFFF&}REST
+Dialogue: 0,0:00:34.81,0:00:34.91,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}DOES {\c&H0000D4FF&}THE {\c&H00FFFFFF&}REST
+Dialogue: 0,0:00:34.90,0:00:35.54,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}DOES {\c&H00FFFFFF&}THE {\c&H0000D4FF&}REST
+Dialogue: 0,0:00:36.31,0:00:36.60,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}SO {\c&H00FFFFFF&}PICK {\c&H00FFFFFF&}ONE
+Dialogue: 0,0:00:36.60,0:00:36.86,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}SO {\c&H0000D4FF&}PICK {\c&H00FFFFFF&}ONE
+Dialogue: 0,0:00:36.86,0:00:37.10,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}SO {\c&H00FFFFFF&}PICK {\c&H0000D4FF&}ONE
+Dialogue: 0,0:00:37.12,0:00:37.48,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}TASK {\c&H00FFFFFF&}YOU'VE {\c&H00FFFFFF&}BEEN
+Dialogue: 0,0:00:37.47,0:00:37.62,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}TASK {\c&H0000D4FF&}YOU'VE {\c&H00FFFFFF&}BEEN
+Dialogue: 0,0:00:37.61,0:00:37.72,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}TASK {\c&H00FFFFFF&}YOU'VE {\c&H0000D4FF&}BEEN
+Dialogue: 0,0:00:37.74,0:00:38.27,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}AVOIDING {\c&H00FFFFFF&}SHRINK {\c&H00FFFFFF&}IT
+Dialogue: 0,0:00:39.06,0:00:39.46,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}AVOIDING {\c&H0000D4FF&}SHRINK {\c&H00FFFFFF&}IT
+Dialogue: 0,0:00:39.45,0:00:39.53,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}AVOIDING {\c&H00FFFFFF&}SHRINK {\c&H0000D4FF&}IT
+Dialogue: 0,0:00:39.55,0:00:39.66,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}TO {\c&H00FFFFFF&}TWO {\c&H00FFFFFF&}MINUTES
+Dialogue: 0,0:00:39.65,0:00:39.87,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}TO {\c&H0000D4FF&}TWO {\c&H00FFFFFF&}MINUTES
+Dialogue: 0,0:00:39.86,0:00:40.51,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}TO {\c&H00FFFFFF&}TWO {\c&H0000D4FF&}MINUTES
+Dialogue: 0,0:00:41.18,0:00:41.38,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}DO {\c&H00FFFFFF&}IT {\c&H00FFFFFF&}NOW
+Dialogue: 0,0:00:41.37,0:00:41.50,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}DO {\c&H0000D4FF&}IT {\c&H00FFFFFF&}NOW
+Dialogue: 0,0:00:41.49,0:00:42.00,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}DO {\c&H00FFFFFF&}IT {\c&H0000D4FF&}NOW
+Dialogue: 0,0:00:42.68,0:00:43.12,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}FOLLOW {\c&H00FFFFFF&}FOR {\c&H00FFFFFF&}A
+Dialogue: 0,0:00:43.11,0:00:43.31,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}FOLLOW {\c&H0000D4FF&}FOR {\c&H00FFFFFF&}A
+Dialogue: 0,0:00:43.30,0:00:43.33,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}FOLLOW {\c&H00FFFFFF&}FOR {\c&H0000D4FF&}A
+Dialogue: 0,0:00:43.35,0:00:43.57,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}NEW {\c&H00FFFFFF&}BRAIN {\c&H00FFFFFF&}HACK
+Dialogue: 0,0:00:43.56,0:00:43.89,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}NEW {\c&H0000D4FF&}BRAIN {\c&H00FFFFFF&}HACK
+Dialogue: 0,0:00:43.88,0:00:44.18,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}NEW {\c&H00FFFFFF&}BRAIN {\c&H0000D4FF&}HACK
+Dialogue: 0,0:00:44.20,0:00:44.43,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H0000D4FF&}EVERY {\c&H00FFFFFF&}DAY
+Dialogue: 0,0:00:44.42,0:00:44.93,Cap,,0,0,0,,{\an5\pos(540,1300)}{\c&H00FFFFFF&}EVERY {\c&H0000D4FF&}DAY

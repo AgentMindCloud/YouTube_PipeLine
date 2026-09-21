@@ -1,0 +1,57 @@
+{
+  "title": "You're Not Lazy — Your Brain Is Scared 🧠",
+  "description": "You're not lazy. Your brain is terrified of big tasks — and there's a two-minute fix. #procrastination #productivity #psychology #2minuterule",
+  "tags": [
+    "procrastination",
+    "productivity",
+    "psychology",
+    "2 minute rule",
+    "brain hacks",
+    "motivation"
+  ],
+  "beats": [
+    {
+      "text": "You're not lazy. Your brain is genuinely terrified of big tasks — and there's a two-minute fix.",
+      "on_screen": "YOU'RE NOT LAZY",
+      "visual_prompt": "a tiny human figure staring up at an enormous looming mountain made of clocks, paperwork and glowing screens, dark cinematic atmosphere, purple rim light",
+      "broll_query": "overwhelmed person desk",
+      "type": ""
+    },
+    {
+      "text": "It's called the two-minute rule. Shrink any task until it takes two minutes or less. That's it.",
+      "on_screen": "THE 2-MINUTE RULE",
+      "visual_prompt": "a giant glowing task list being sliced by a beam of light down to one tiny card, dark background, cyan accent light",
+      "broll_query": "writing checklist",
+      "type": ""
+    },
+    {
+      "text": "'Write the essay' becomes 'open the document.' 'Get fit' becomes 'put on your shoes.'",
+      "on_screen": "START ABSURDLY SMALL",
+      "visual_prompt": "a pair of running shoes glowing on a dark floor with a single spotlight, minimalist cinematic",
+      "broll_query": "running shoes",
+      "type": ""
+    },
+    {
+      "text": "Here's why it works: your brain resists starting, not doing. Two minutes sneaks straight past the fear response.",
+      "on_screen": "TRICK YOUR BRAIN",
+      "visual_prompt": "a stylized translucent human brain with a glowing golden key sliding into it, dark navy background, dramatic lighting",
+      "broll_query": "brain neuroscience",
+      "type": ""
+    },
+    {
+      "text": "And motivation doesn't create action — action creates motivation. Once you start, momentum does the rest.",
+      "on_screen": "MOMENTUM DOES THE REST",
+      "visual_prompt": "a small snowball rolling downhill becoming a massive avalanche, motion blur, dark blue winter twilight",
+      "broll_query": "snowball rolling",
+      "type": ""
+    },
+    {
+      "text": "So pick one task you've been avoiding. Shrink it to two minutes. Do it now. Follow for a new brain hack every day.",
+      "on_screen": "TRY IT TODAY",
+      "visual_prompt": "a glowing countdown timer hitting zero with rays of golden light bursting outward, dark background",
+      "broll_query": "timer countdown",
+      "type": "cta"
+    }
+  ],
+  "source_seed": "two-minute-rule"
+}
