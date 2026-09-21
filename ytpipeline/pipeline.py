@@ -47,18 +47,26 @@ def _load_picked_idea(cfg, pick):
 
 def execute(cfg, idea_text=None, pick=None, auto=False, no_upload=False, force=False,
             privacy=None, run_id=None, log=print):
-    """Run the whole pipeline. Returns the Run."""
     if run_id:
         run = Run.open(run_id)
         idea_dict = run.load_json("idea.json") or {"topic": run.read().get("title", "video"), "custom": True}
         log(f"Resuming run {run.id}")
     else:
         if idea_text:
-            idea_dict = {"topic": idea_text, "title": idea_text[:70], "hook": idea_text,
-                         "angle": "", "custom": True}
-            log(f"Idea (from --idea): {idea_text[:80]}")
+            seed = idea_mod.match_seed(idea_text)
+            if seed:
+                idea_dict = idea_mod.idea_from_seed(seed)
+                log(f"Idea matched seed {seed['id']}: {seed['title']}")
+            else:
+                idea_dict = {"topic": idea_text, "title": idea_text[:70], "hook": idea_text,
+                             "angle": "", "custom": True}
+                log(f"Idea (custom --idea): {idea_text[:80]}")
         elif pick:
             idea_dict = _load_picked_idea(cfg, pick)
+            seed = idea_mod.match_seed(
+                " ".join(str(idea_dict.get(k) or "") for k in ("seed_id", "topic", "title", "hook")))
+            if seed and not idea_dict.get("seed_id"):
+                idea_dict = idea_mod.idea_from_seed(seed)
             log(f"Idea (pick #{pick}): {idea_dict.get('topic', idea_dict.get('title', ''))[:80]}")
         else:
             log("Stage 1/8  IDEATE")
@@ -169,7 +177,7 @@ def approve(cfg, run_id, privacy=None, log=print):
 
 def upload_file(cfg, path, title, description="", tags=None, privacy="private", log=print):
     meta = {"title": title or Path(path).stem, "description": description,
-            "tags": tags or ["shorts"], "categoryId": cfg("upload.category_id", 22),
+            "tags": tags or ["psychology"], "categoryId": cfg("upload.category_id", 22),
             "privacyStatus": privacy}
     run = Run.create(f"manual-{meta['title']}")
     result = yt_mod.upload_video(cfg, Path(path), meta, privacy=privacy, log=log)
