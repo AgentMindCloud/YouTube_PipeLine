@@ -21,9 +21,10 @@ def _clean(tok):
 
 
 def group_lines(words, max_words, max_chars):
-    """Group words into short caption lines (never across beats)."""
     lines, cur = [], []
     for w in words:
+        if not _clean(w["w"]):
+            continue
         if cur and (len(cur) >= max_words
                     or sum(len(_clean(x["w"])) + 1 for x in cur + [w]) > max_chars
                     or w["beat"] != cur[-1]["beat"]):
@@ -43,6 +44,7 @@ def build_ass(cfg, words, total_duration, path):
     y = int(cfg("video.caption.y", 1300))
     max_words = int(cfg("video.caption.max_words_per_line", 3))
     max_chars = int(cfg("video.caption.max_chars_per_line", 24))
+    handle = (cfg("channel.handle", "") or "").strip()
 
     header = f"""[Script Info]
 ScriptType: v4.00+
@@ -56,11 +58,17 @@ YCbCr Matrix: TV.709
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: Cap,{font},{size},{wh},{wh},&H00000000,&HA0000000,-1,0,0,0,100,100,0.5,0,1,5,2.2,5,60,60,0,1
 Style: Bar,{font},10,{wh},{wh},&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Handle,Poppins SemiBold,36,{wh},{wh},&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3,0,8,40,40,70,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 """
-    # bottom progress bar as ASS vector drawings (portable across ffmpeg builds)
+    extras = []
+    if handle:
+        extras.append(
+            f"Dialogue: 1,{_ts(0)},{_ts(total_duration + 2)},Handle,,0,0,0,,"
+            f"{{\\an8\\pos(540,88)\\alpha&H50&}}{handle}")
+
     bar_events = []
     step = 0.25
     nt = max(1, int(total_duration / step))
@@ -77,7 +85,6 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     for li, line in enumerate(lines):
         line_s = line[0]["s"]
         line_e = line[-1]["e"]
-        # tiny breathing room at line end, without overlapping next line
         next_s = lines[li + 1][0]["s"] if li + 1 < len(lines) else total_duration
         line_e = min(line_e + 0.14, next_s - 0.02, total_duration)
         tokens = [_clean(w["w"]) for w in line]
@@ -95,5 +102,5 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             text = f"{{\\an5\\pos(540,{y})}}" + " ".join(parts)
             events.append(f"Dialogue: 0,{_ts(s)},{_ts(e)},Cap,,0,0,0,,{text}")
 
-    path.write_text(header + "\n".join(bar_events + events) + "\n", encoding="utf-8")
+    path.write_text(header + "\n".join(extras + bar_events + events) + "\n", encoding="utf-8")
     return path
