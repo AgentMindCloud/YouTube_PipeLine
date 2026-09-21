@@ -21,7 +21,6 @@ class Run:
         self.dir.mkdir(parents=True, exist_ok=True)
         self.status_file = self.dir / "status.json"
 
-    # -- lifecycle -----------------------------------------------------------
     @classmethod
     def create(cls, title):
         run_id = f"{time.strftime('%Y%m%d-%H%M%S')}-{_slugify(title)}"
@@ -40,23 +39,22 @@ class Run:
         data = self.read()
         data.update(fields)
         data["updated"] = time.strftime("%Y-%m-%d %H:%M:%S")
-        self.status_file.write_text(json.dumps(data, indent=2, ensure_ascii=False))
+        self.status_file.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
 
     def read(self):
         if self.status_file.exists():
-            return json.loads(self.status_file.read_text())
+            return json.loads(self.status_file.read_text(encoding="utf-8"))
         return {"run_id": self.id}
 
-    # -- artifacts -----------------------------------------------------------
     def p(self, *parts):
         return self.dir.joinpath(*parts)
 
     def save_json(self, name, obj):
-        self.p(name).write_text(json.dumps(obj, indent=2, ensure_ascii=False))
+        self.p(name).write_text(json.dumps(obj, indent=2, ensure_ascii=False), encoding="utf-8")
 
     def load_json(self, name, default=None):
         f = self.p(name)
-        return json.loads(f.read_text()) if f.exists() else default
+        return json.loads(f.read_text(encoding="utf-8")) if f.exists() else default
 
     @classmethod
     def all_runs(cls):
@@ -67,7 +65,7 @@ class Run:
             sf = d / "status.json"
             if d.is_dir() and sf.exists():
                 try:
-                    runs.append(json.loads(sf.read_text()))
+                    runs.append(json.loads(sf.read_text(encoding="utf-8")))
                 except Exception:
                     pass
         return runs
@@ -76,7 +74,7 @@ class Run:
 def upload_counter():
     """Per-day upload counts for the daily_upload_limit safety valve."""
     f = OUTPUT / "uploads.json"
-    data = json.loads(f.read_text()) if f.exists() else {}
+    data = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
     today = time.strftime("%Y-%m-%d")
 
     def today_count():
@@ -84,6 +82,6 @@ def upload_counter():
 
     def bump():
         data[time.strftime("%Y-%m-%d")] = today_count() + 1
-        f.write_text(json.dumps(data, indent=2))
+        f.write_text(json.dumps(data, indent=2), encoding="utf-8")
 
     return today_count, bump
